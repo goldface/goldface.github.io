@@ -10,9 +10,9 @@ user_title: GoldFace - Developer
 email: gold_face@naver.com
 twitter_username: goldface__
 github_username:  goldface
-gplus_username:  #loremipsum
-linkedin_public_url: #loremipsum # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
-disqus_username: #loremipsum
+#gplus_username:  #loremipsum
+#linkedin_public_url: #loremipsum # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
+#disqus_username: #loremipsum
 profile_picture: http://goldface.kr/bootstrap/assets/images/profile.png
 
 # Build settings
