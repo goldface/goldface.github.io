@@ -1,68 +1,29 @@
 # Site settings
-title: GoldFace - Game Developer
-description: "A blog about GoldFace life ..."
-baseurl: "" #/space-jekyll-template" # for test: remove string '/space-jekyll-template' to ''
-url: "http://goldface.github.io/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
-
-# User settings
-username: GoldFace
-user_title: GoldFace - Developer
-email: gold_face@naver.com
-twitter_username: goldface__
-github_username:  goldface
-#gplus_username:  #loremipsum
-#linkedin_public_url: #loremipsum # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
-#disqus_username: #loremipsum
-profile_picture: http://goldface.kr/bootstrap/assets/images/profile.png
+title: *folio
+email: you@example.com
+description: > # this means to ignore newlines until "baseurl:"
+  A simple, whitespace, helvetica based portfolio theme.
+baseurl:  # the subpath of your site, e.g. /blog/
+url:  # the base hostname & protocol for your site
+twitter_username: twitter_username
+github_username:  github_username
 
 # Build settings
 markdown: kramdown
+
 highlighter: rouge
-permalink: /:title/
 
-# html minify
-compress_html:
-  clippings: all
-  comments: all
-  endings: []
-  profile: false
+# Pagination
+paginate: 15
+paginate_path: "/blog/page:num/"
 
-# Links to include in menu navigation
-links:
-  section_1:
-    - title: home
-      url: /
-      key_trigger: 1
-    - title: my posts
-      url: /posts
-      key_trigger: 2
-    - title: series
-      url: /series
-      key_trigger: 3
-    - title: tags
-      url: /tags
-      key_trigger: 4
-    - title: about me
-      url: /about
-      key_trigger: 5
-  section_2:
-    - title: github
-      url: http://www.github.com/goldface
-      new_tab: true
-      key_trigger: g
-    - title: twitter
-      url: http://www.twitter.com/goldfcae__
-      key_trigger: t
-    - title: search
-      url: ""
-      key_trigger: s #WARNING: search only works with "s"
 
-# projects in header index
-projects:
-  - name: SampleCode
-    url: https://github.com/goldface/SampleCode
-  - name: GoldFace_Bot-for-Telegram (Private Bot)
-    url: https://github.com/goldface/GoldFace_Bot-for-Telegram
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+  poetry:
+    output: true
+    permalink: /poetry/:path/
 
-# exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules']
+
