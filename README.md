@@ -1,51 +1,113 @@
-# *folio
-A simple theme for showcasing your work, emphasis on whitespace, transparency, and helvetica. 
+# plainwhite
+
+Simplistic jekyll portfolio-style theme for writers.
+
+**Demo**: [thelehhman.com](https://thelehhman.com)
+
+![plainwhite theme preview](/screenshot.png)
 
 
-<a href="http://liabogoev.com/-folio">Live Demo</a>
+## Installation on Github Pages
 
-<hr/>
+Add this line to your site's `_config.yml`:
+```yaml
+remote_theme: thelehhman/plainwhite-jekyll
+```
+## Installation
 
+Add this line to your Jekyll site's `Gemfile`:
 
-## Features
+```ruby
+gem "plainwhite"
+```
 
-### Collections
-This Jekyll theme implements collections to let you break up your work into categories. The example is divided into poetry and portfolio, but easily revamp this into recipes, apps, short stories, limmericks, whatever your creative work is. 
-> To do this, edit the collections in the config file, create a corresponding folder, and update the portfolio and poetry source files. 
+And add this line to your Jekyll site's `_config.yml`:
 
-Three different layouts are included—the poetry layout, for a simple list of entries, the blog layout (index.html), for more detailed descriptive list of entries, and the portfolio layout. The portfolio layout overlays a descriptive hoverover on a background image. If no image is provided, the square is auto-filled with the chosen theme color. Thumbnail sizing is not necessary, as the grid crops images perfectly. 
+```yaml
+theme: plainwhite
+```
 
-### Portfolio Specifics
-You can easily add full pages for each of the projects in your portfolio. If you want one to link to an external website, create a file for it in _portfolio, and  fil in the YAML front matter as you would for another, but with a redirect, like so: 
+And then execute:
 
-	---
-	layout: post
-	title: Project
-	description: a project that redirects to another website
-	img:
-	redirect: https://otherpage.com
-	--- 
+    $ bundle
 
-### Theming
-Six beautiful theme colors have been selected to choose from. The default is red, but quickly change it by editing the _base.scss file in line 40. The color variable are listed there, as well. 
+Or install it yourself as:
 
-### Photos
-Photo formatting is made simple using rows of a 3-column system. Make photos 1/3, 2/3, or full width. Easily create beautiful grids within your blog posts and projects pages. 
+    $ gem install plainwhite
 
-### Code Highlighting
-This theme implements Jekyll's built in code syntax highlighting with Pygments. Just use a liquid tag to delineate your code: 
-{% highlight python %}
-	code code code
-{% endhighlight %}
+## Usage
 
+The "plainwhite" key in _config.yml is used to customize the theme data.
+```yaml
+plainwhite:
+  name: Adam Denisov
+  tagline: Developer. Designer
+  date_format: "%b %-d, %Y"
 
-<hr/>
-The MIT License (MIT)
-Copyright (c) 2015 Lia Bogoev
+  social_links:
+    twitter: thelehhman
+    github:  thelehhman
+    linkedIn: in/thelehhman # format: locale/username
+```
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+**Updating Placeholder Image**
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+**Comments (Disqus)**
 
+Comments on posts can be enabled by specifying your disqus_shortname under plainwhite in `_config.yml`. For example,
+```yaml
+plainwhite:
+  disqus_shortname: games
+```
+
+**Google Analytics**
+
+It can be enabled by specifying your analytics id under plainwhite in `_config.yml`
+```yaml
+plainwhite:
+  analytics_id: '< YOUR ID >'
+```
+
+**Sitemap**
+
+It can be toggled by the following line to under plainwhite in  `_config.yml`
+
+```yaml
+plainwhite:
+  sitemap: true
+```
+
+**Excerpts**
+
+Excerpts can be enabled by adding the following line to your `_config.yml`
+```yaml
+show_excerpts: true
+```
+**Layouts**
+
+- Home
+- Page
+- Post
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `plainwhite.gemspec` accordingly.
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## More themes
+
+- [Texture](https://github.com/thelehhman/texture)
